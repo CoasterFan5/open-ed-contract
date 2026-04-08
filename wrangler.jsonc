@@ -8,6 +8,9 @@
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
+	"build": {
+		"command": "npx wrangler d1 migrations apply open-ed-contract --remote && pnpm run build"
+	},
 	"d1_databases": [
 		{
 			"binding": "DB",
