@@ -11,8 +11,8 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "open_ed_contract",
-			"database_id": "open-contract-db",
+			"database_name": "open-ed-contract",
+			"database_id": "b4270317-c075-4c28-94cf-84256803b7d6",
 			"preview_database_id": "d",
 			"remote": false,
 			"migrations_dir": "./drizzle",
