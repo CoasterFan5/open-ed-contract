@@ -15,11 +15,11 @@
 		{
 			"binding": "DB",
 			"database_name": "open-ed-contract",
+			"migrations_dir": "drizzle",
+			"migrations_table": "__drizzle_migrations",
 			"database_id": "b4270317-c075-4c28-94cf-84256803b7d6",
 			"preview_database_id": "d",
-			"remote": false,
-			"migrations_dir": "./drizzle",
-			"migrations_table": "__drizzle_migrations"
+			"remote": false
 		}
 	],
 	"workers_dev": true,

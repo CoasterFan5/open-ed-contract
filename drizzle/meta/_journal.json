@@ -8,6 +8,13 @@
       "when": 1775625374755,
       "tag": "0000_loose_infant_terrible",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1775696205426,
+      "tag": "0001_luxuriant_madelyne_pryor",
+      "breakpoints": true
     }
   ]
 }

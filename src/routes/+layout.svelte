@@ -10,10 +10,7 @@
 </svelte:head>
 
 <div class="wrap">
-	<nav class="navbar"></nav>
-	<div class="content">
-		{@render children()}
-	</div>
+	{@render children()}
 </div>
 
 <style>
@@ -23,9 +20,11 @@
 
 		font-family: var(--font-family);
 
-		--background: #f1f1f1;
+		--background: #fafafa;
+		--background-alt: #ffffff;
+		--border: #dfdfe0;
 		--color: #000;
-		--accent: #1447e6;
+		--accent: #ff8a00;
 
 		--color-20: color-mix(in srgb, var(--color) 20%, transparent);
 		--color-50: color-mix(in srgb, var(--color) 50%, transparent);
