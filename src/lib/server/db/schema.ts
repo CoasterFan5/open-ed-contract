@@ -1,6 +1,14 @@
 import { sqliteTable, integer, text } from 'drizzle-orm/sqlite-core';
 import { createId } from '@paralleldrive/cuid2';
 
+export const usersTable = sqliteTable('users', {
+	id: text('id').primaryKey().$defaultFn(createId),
+	email: text().unique().notNull(),
+	salt: text().notNull(),
+	hash: text().notNull(),
+	isVerified: integer({ mode: 'boolean' })
+});
+
 export const schoolsTable = sqliteTable('schools', {
 	id: text('id').primaryKey().$defaultFn(createId),
 	name: text().notNull()

@@ -1,13 +1,17 @@
 <script lang="ts">
-	type TextInputProps = {
+	const uid = $props.id();
+
+	let {
+		label = '',
+		placeholder = '',
+		value = $bindable(''),
+		type
+	}: {
 		label?: string;
 		placeholder?: string;
 		value?: string;
-	};
-
-	const uid = $props.id();
-
-	let { label = '', placeholder = '', value = $bindable('') }: TextInputProps = $props();
+		type?: HTMLInputElement['type'];
+	} = $props();
 </script>
 
 <div class="field">
@@ -15,7 +19,7 @@
 		<label for={uid}>{label}</label>
 	{/if}
 
-	<input id={uid} type="text" {placeholder} bind:value />
+	<input id={uid} {type} {placeholder} bind:value />
 </div>
 
 <style>
@@ -39,7 +43,7 @@
 		line-height: 1.4;
 		color: var(--color);
 		background: var(--background);
-		border: 1px solid var(--color-20);
+		border: 1px solid var(--border);
 		border-radius: 0.25rem;
 		padding: 0.25rem 0.5rem;
 		outline: none;
