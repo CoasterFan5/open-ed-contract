@@ -3,15 +3,18 @@
 	import Button from '$lib/components/Button.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import TextInput from '$lib/components/TextInput.svelte';
+	import { loginForm } from './login.remote';
 </script>
 
 <div class="text">
 	<h3>Welcome Back!</h3>
 	<p>Enter your username and password below.</p>
 </div>
-<TextInput label="Email" />
-<TextInput label="Password" />
-<Button>Login</Button>
+<form {...loginForm}>
+	<TextInput name="email" label="Email" />
+	<TextInput name="password" type="password" label="Password" />
+	<Button type="submit">Login</Button>
+</form>
 <p>No account? <Link href={resolve('/contribute/(auth)/register')}>Make one!</Link></p>
 
 <style>

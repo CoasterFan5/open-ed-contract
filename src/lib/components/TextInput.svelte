@@ -4,10 +4,12 @@
 	let {
 		label = '',
 		placeholder = '',
+		name = '',
 		value = $bindable(''),
 		type
 	}: {
 		label?: string;
+		name?: string;
 		placeholder?: string;
 		value?: string;
 		type?: HTMLInputElement['type'];
@@ -19,7 +21,7 @@
 		<label for={uid}>{label}</label>
 	{/if}
 
-	<input id={uid} {type} {placeholder} bind:value />
+	<input id={uid} {name} {type} {placeholder} bind:value />
 </div>
 
 <style>

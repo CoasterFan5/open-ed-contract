@@ -9,6 +9,13 @@ export const usersTable = sqliteTable('users', {
 	isVerified: integer({ mode: 'boolean' })
 });
 
+export const sessionsTable = sqliteTable('sessions', {
+	token: text('token').primaryKey(),
+	userId: text()
+		.notNull()
+		.references(() => usersTable.id)
+});
+
 export const schoolsTable = sqliteTable('schools', {
 	id: text('id').primaryKey().$defaultFn(createId),
 	name: text().notNull()
