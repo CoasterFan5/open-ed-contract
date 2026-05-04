@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import type { ResolvedPathname } from '$app/types';
 	import type { Snippet } from 'svelte';
 
@@ -12,6 +11,7 @@
 	} = $props();
 </script>
 
+<!-- eslint-disable-next-line svelte/no-navigation-without-resolve-->
 <a {href}>
 	{@render children()}
 </a>

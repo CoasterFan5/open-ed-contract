@@ -1,5 +1,5 @@
 import type { Cookies } from '@sveltejs/kit';
-import { getDb, type Database } from './db';
+import { type Database } from './db';
 import { sessionsTable, type usersTable } from './db/schema';
 import crypto from 'crypto';
 

@@ -18,7 +18,8 @@ export const sessionsTable = sqliteTable('sessions', {
 
 export const schoolsTable = sqliteTable('schools', {
 	id: text('id').primaryKey().$defaultFn(createId),
-	name: text().notNull()
+	name: text().notNull(),
+	location: text().notNull()
 });
 
 export const softwareTable = sqliteTable('software', {

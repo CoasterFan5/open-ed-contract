@@ -1,4 +1,6 @@
 <script lang="ts">
+	import type { RemoteFormIssue } from '@sveltejs/kit';
+
 	const uid = $props.id();
 
 	let {
@@ -6,12 +8,14 @@
 		placeholder = '',
 		name = '',
 		value = $bindable(''),
+		issues,
 		type
 	}: {
 		label?: string;
 		name?: string;
 		placeholder?: string;
 		value?: string;
+		issues?: RemoteFormIssue[] | undefined;
 		type?: HTMLInputElement['type'];
 	} = $props();
 </script>
@@ -22,6 +26,10 @@
 	{/if}
 
 	<input id={uid} {name} {type} {placeholder} bind:value />
+
+	{#each issues as issue, index (index)}
+		<span>{issue.message}</span>
+	{/each}
 </div>
 
 <style>

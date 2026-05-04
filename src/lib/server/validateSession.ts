@@ -18,6 +18,7 @@ export const validateSession = async ({
 	const sessionToken = cookies.get('session');
 
 	if (!sessionToken) {
+		console.log(`No session token`);
 		throw goToLogin();
 	}
 
@@ -29,6 +30,7 @@ export const validateSession = async ({
 		.get();
 
 	if (!u?.users) {
+		console.log(`no user`);
 		throw goToLogin();
 	}
 

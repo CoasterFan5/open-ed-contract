@@ -1,0 +1,1 @@
+ALTER TABLE `schools` ADD `location` text NOT NULL;
