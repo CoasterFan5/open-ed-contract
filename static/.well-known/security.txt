@@ -1,0 +1,3 @@
+Ruh Roh.
+
+Report security issues on Github: https://github.com/CoasterFan5/open-ed-contract
