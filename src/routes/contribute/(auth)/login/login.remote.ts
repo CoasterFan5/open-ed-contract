@@ -4,7 +4,7 @@ import { createSession } from '$lib/server/createSession';
 import { getDb } from '$lib/server/db';
 import { usersTable } from '$lib/server/db/schema';
 import { hashPassword } from '$lib/server/hashPassword';
-import { error, redirect } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 import { eq } from 'drizzle-orm';
 import { z } from 'zod';
 
@@ -26,7 +26,7 @@ export const loginForm = form(
 			return;
 		}
 
-		const { hash, salt } = hashPassword({
+		const { hash } = hashPassword({
 			salt: u.salt,
 			password
 		});

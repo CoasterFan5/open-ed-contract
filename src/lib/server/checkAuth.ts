@@ -26,6 +26,7 @@ export const checkAuth = async () => {
 
 	return {
 		user: u,
-		database
+		database,
+		requestEvent
 	};
 };

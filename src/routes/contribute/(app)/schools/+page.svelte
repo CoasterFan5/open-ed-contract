@@ -1,8 +1,8 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
+	import CustomTable from '$lib/components/CustomTable.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import AddSchoolModal from './AddSchoolModal.svelte';
-	import CustomTable from './CustomTable.svelte';
 	import { getSchools } from './getSchools.remote';
 
 	let showingAddSchoolModal = $state(false);

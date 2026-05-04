@@ -2,7 +2,6 @@
 	import type { Snippet } from 'svelte';
 	import IconHome from '~icons/ph/house';
 	import IconCode from '~icons/ph/code';
-	import IconFile from '~icons/ph/file-text';
 	import IconBuilding from '~icons/ph/building-office';
 	import { resolve } from '$app/paths';
 
@@ -26,19 +25,11 @@
 					</a>
 				</li>
 				<li>
-					<a href={resolve('/contribute/(app)/portal')}>
+					<a href={resolve('/contribute/(app)/software')}>
 						<span class="icon">
 							<IconCode />
 						</span>
 						<span>Software</span>
-					</a>
-				</li>
-				<li>
-					<a href={resolve('/contribute/(app)/portal')}>
-						<span class="icon">
-							<IconFile />
-						</span>
-						<span>Contracts</span>
 					</a>
 				</li>
 				<li>

@@ -11,6 +11,13 @@
 	"build": {
 		"command": "npx wrangler d1 migrations apply open-ed-contract --remote && pnpm run build"
 	},
+
+	"r2_buckets": [
+		{
+			"binding": "R2",
+			"bucket_name": "sunlight-ledger-bucket"
+		}
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",

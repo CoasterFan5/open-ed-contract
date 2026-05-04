@@ -24,6 +24,7 @@ export const schoolsTable = sqliteTable('schools', {
 
 export const softwareTable = sqliteTable('software', {
 	id: text('id').primaryKey().$defaultFn(createId),
+	slug: text().notNull().unique(),
 	name: text().notNull()
 });
 
