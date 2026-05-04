@@ -12,6 +12,8 @@ export const addContract = form(
 
 		console.log('Uploading...');
 
-		const p = await requestEvent.platform?.env.R2.put('0', file.stream());
+		const bytes = await file.bytes();
+
+		const p = await requestEvent.platform?.env.R2.put('0', bytes);
 	}
 );
